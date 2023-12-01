@@ -1,0 +1,761 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #314438;
+    --second-color: white;
+    --primary-transition: 0.5s ease;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body.open {
+    overflow: hidden;
+}
+
+button {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+    background: rgba(0, 0, 0, 0.3) url('assets/furniture-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+}
+
+.container-main header {
+    display: flex;
+    padding: 1rem 3rem;
+    position: fixed;
+    z-index: 10;
+    border-bottom: 1px solid rgb(192, 190, 190);
+    background-color: var(--second-color);
+    width: 100%;
+    height: inherit;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-right: 5%;
+    text-wrap: nowrap;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.nav-hamburguer-icon {
+    display: none;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.nav ul button {
+    display: none;
+}
+
+.nav ul i {
+    display: none;
+}
+
+.nav ul li a {
+    text-wrap: nowrap;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav ul a span {
+    color: #C66E4E;
+}
+
+.store-btn {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    text-transform: uppercase;
+    margin-left: auto;
+}
+
+.store-btn button {
+    text-transform: uppercase;
+    text-wrap: nowrap;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: #F3EEEA;
+    font-weight: 700;
+    font-size: 0.7rem;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    transition: all var(--primary-transition);
+}
+
+.store-btn button:hover {
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.store-btn i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.container-main main {
+    display: flex;
+    flex-direction: column;
+    color: var(--second-color);
+    margin-left: 10%;
+    margin-top: 10%;
+    gap: 2rem;
+    width: 40%;
+}
+
+.container-main main div {
+    display: flex;
+    flex-direction: column;
+    line-height: 7rem;
+    width: fit-content;
+}
+
+.container-main main div h1 {
+    font-size: 15rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.container-main main div .the {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.container-main main div .of-the-year {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-left: auto;
+}
+
+.container-main main span {
+    font-size: 1.3rem;
+    text-align: left;
+}
+
+.container-main main button {
+    border: 1px solid var(--second-color);
+    color: var(--primary-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 1rem 0;
+    cursor: pointer;
+    transition: all var(--primary-transition);
+}
+
+.container-main main button:hover {
+    color: var(--second-color);
+    background-color: transparent;
+}
+
+.container-main main .help {
+    font-size: 1rem;
+}
+
+.container-main main .help a {
+    transition: all var(--primary-transition);
+}
+
+.container-main main .help a:hover {
+    color: #8DC0D2;
+}
+
+.container-main main span a {
+    text-decoration: none;
+    color: var(--second-color);
+    font-weight: 700;
+}
+
+.divider-brands {
+    background-color: var(--primary-color);
+    min-height: 25svh;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    max-height: 100%;
+}
+
+.container-brands {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+.divider-brands h3 {
+    color: var(--second-color);
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+}
+
+.divider-brands span {
+    color: var(--second-color);
+    font-size: 1.4rem;
+    word-spacing: 0.3rem;
+    text-align: center;
+}
+
+.divider-brands ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    gap: 5rem;
+    margin-top: 2rem;
+}
+
+.brand-icon-list li a i {
+    font-size: 2rem;
+    color: var(--second-color);
+}
+
+.container-main-products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 2rem;
+}
+
+.container-main-products .container-jobs .wrapper-image {
+    max-width: 548px;
+    max-height: 370px;
+    overflow: hidden;
+}
+
+.container-main-products .container-products .wrapper-image {
+    max-width: 360px;
+    max-height: 540px;
+    overflow: hidden;
+}
+
+.container-main-products .wrapper-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all var(--primary-transition);
+}
+
+.container-main-products img:hover {
+    transform: scale(1.1);
+}
+
+.container-jobs {
+    display: flex;
+    gap: 3rem;
+}
+
+.jobs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.jobs-item div {
+    color: #8DC0D2;
+}
+
+.jobs-item div span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.jobs-item div i {
+    font-size: 1rem;
+}
+
+.jobs-item span {
+    font-size: 0.9rem;
+}
+
+.container-products {
+    display: flex;
+    gap: 2rem;
+}
+
+.products-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.products-item > span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.products-item div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: 700;
+    color: #8DC0D2;
+    text-transform: uppercase;
+}
+
+.container-main-products button {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 1rem 4rem;
+    color: #F3EEEA;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all var(--primary-transition);
+}
+
+.container-main-products button:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.container-main-bestsellers {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    min-height: 80svh;
+    align-items: center;
+    background: #f3f0ed;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.header-bestseller {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-bestseller h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    font-family: 'Frank Ruhl Libre', sans-serif;
+    color: var(--primary-color);
+}
+
+.header-bestseller div {
+    display: flex;
+    gap: 1rem;
+}
+
+.header-bestseller button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+    border: 0.5px solid var(--primary-color);
+    background-color: transparent;
+    border-radius: 100%;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all var(--primary-transition);
+}
+
+.header-bestseller button:hover {
+    background: rgba(0, 0, 0, 0.1)
+}
+
+.container-bestsellers {
+    display: flex;
+    gap: 1rem;
+    max-width: 80%;
+    height: 80%;
+    overflow-x: hidden;
+}
+
+.bestsellers-item {
+    overflow: hidden;
+    background-color: var(--second-color);
+    transition: all var(--primary-transition);
+}
+
+.bestsellers-item img {
+    width: 100%;
+    max-height: 80%;
+    min-height: fit-content;
+}
+
+.bestsellers-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 15px 20px -14px rgba(0,0,0,0.5);
+}
+
+.bestsellers-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 2rem;
+}
+
+.bestsellers-footer div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bestsellers-footer div span:nth-child(1) {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.bestsellers-footer div span:nth-child(2) {
+    color: var(--primary-color);
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.bestsellers-footer > span {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    min-height: 50svh;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: auto;
+    padding: 1rem;
+}
+
+.footer-address {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 15%;
+}
+
+.footer-address h2 {
+    font-size: 2rem;
+    text-wrap: nowrap;
+    color: rgb(255, 255, 255, 0.6);
+}
+
+.footer-address span {
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255, 0.6);
+    min-width: 70%;
+}
+
+.footer-container-icons {
+    display: flex;
+}
+
+.footer-container-icons i{
+    background-color: var(--second-color);
+    color: var(--primary-color);
+    border-radius: 100px;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0.2rem;
+    cursor: pointer;
+}
+
+.container-footer-info {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-info h2{
+    font-size: 1.6rem;
+    color: rgb(255, 255, 255, 0.4);
+}
+
+.footer-info ul {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-info ul li{
+    list-style: none;
+}
+
+.footer-info ul li a {
+    text-decoration: none;
+    color: var(--second-color);
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.footer-info ul li a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 1400px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav ul {
+        display: none;
+    }
+
+    .store-btn button {
+        display: none;
+    }
+
+    .container-jobs {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .container-products {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .container-bestsellers {
+        justify-content: center;
+    }
+
+    .header-bestseller h1 {
+        font-size: 1.7rem;
+    }
+
+    .header-bestseller button {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    div .bestsellers-item:nth-child(4){
+        display: none;
+    }
+
+    .container-main header {
+        min-height: 5svh;
+    }
+
+    body .nav ul {
+        position: fixed;
+        left: 0;
+        top: 5svh;
+        right: 0;
+        height: 100svh;
+        z-index: 5;
+        background-color: var(--second-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        transform: translateX(-100%);
+        transition: all var(--primary-transition);
+    }
+
+    .nav-list-open {
+        transform: translateX(0) !important;
+    }
+    
+    body .nav ul li{
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: all var(--primary-transition);
+    }
+
+    body .nav ul li:hover {
+        transform: scale(1.05);
+    }
+
+    body .nav ul li i {
+        display: inline-block !important;
+        font-size: 2rem;
+        opacity: 0.4;
+    }
+    
+    body .nav ul button {
+        display: inline-block;
+        all: unset;
+        border: 1px solid var(--primary-color);
+        cursor: pointer;
+        padding: 1rem;
+        text-align: center;
+        font-weight: 700;
+        color: var(--second-color);
+        background-color: var(--primary-color);
+        width: 90%;
+        transition: all var(--primary-transition);
+    }
+
+    body .nav ul button:hover {
+        color: var(--primary-color);
+        background-color: var(--second-color);
+    }
+
+    .nav-hamburguer-icon {
+        display: block !important;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 0.5rem;
+        cursor: pointer;
+    }
+
+    .nav-hamburguer-icon.open div{
+        background-color: black !important;
+    }
+
+    .nav-hamburguer-icon.open .line1 {
+        transform: rotate(-45deg) translate(-7px, 7px);
+    }
+
+    .nav-hamburguer-icon.open .line2 {
+        opacity: 0;
+    }
+
+    .nav-hamburguer-icon.open .line3 {
+        transform: rotate(45deg) translate(-3px, -3px);
+    }
+
+    .nav-hamburguer-icon div {
+        background-color: var(--primary-color);
+        width: 20px;
+        height: 2px;
+        margin: 5px;
+        transition: all var(--primary-transition);
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .nav ul li:hover {
+        border-bottom: 2px solid #8DC0D2;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    div .bestsellers-item:nth-child(3){
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .container-main header {
+        padding: 1rem;
+    }
+
+    .container-main main div h1 {
+        font-size: 8rem;
+    }
+
+    .divider-brands h3 {
+        font-size: 0.8rem;
+    }
+
+    .divider-brands span {
+        font-size: 1rem;
+    }
+
+    .brand-icon-list li a i {
+        font-size: 1.2rem;
+        color: var(--second-color);
+    }
+
+    .divider-brands ul {
+        gap: 1rem;
+    }
+
+    .container-main main div h1 {
+        line-height: 4rem;
+    }
+
+    .container-main main {
+        width: 80%;
+    }
+
+    div .bestsellers-item:nth-child(2){
+        display: none;
+    }
+
+    footer {
+        flex-wrap: wrap;
+    }
+
+    .footer-container-icons i {
+        padding: 0.2rem;
+    }
+
+    .footer-address {
+        align-items: center;
+        margin-top: 1rem;
+        max-width: 100%;
+    }
+
+    .footer-address h2 {
+        font-size: 1.5rem;
+        color: rgb(255, 255, 255, 0.6);
+    }
+    
+    .footer-address span {
+        font-size: 1rem;
+    }
+
+    .container-footer-info {
+        margin-bottom: 1rem;
+    }
+
+    .container-footer-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer-info ul li a {
+        font-size: 1rem;
+    }
+    
+}
